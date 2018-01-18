@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFF48D24200C89C000329EA1 /* MethodTraceConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFF48D23200C89C000329EA1 /* MethodTraceConfig.plist */; };
+		EFF48D27200C89C000329EA1 /* put ipa or app here in Resources */ = {isa = PBXBuildFile; fileRef = EFF48D26200C89C000329EA1 /* put ipa or app here */; };
+		EFF48D2F200C89C000329EA1 /* libLiveTriviaDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFF48D2E200C89C000329EA1 /* libLiveTriviaDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		EFF48D34200C89C000329EA1 /* Cycript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF48D33200C89C000329EA1 /* Cycript.framework */; };
+		EFF48D36200C89C000329EA1 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF48D35200C89C000329EA1 /* JavaScriptCore.framework */; };
+		EFF48D38200C89C000329EA1 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF48D37200C89C000329EA1 /* RevealServer.framework */; };
+		EFF48D3A200C89C000329EA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF48D39200C89C000329EA1 /* Foundation.framework */; };
+		EFF48D3C200C89C000329EA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF48D3B200C89C000329EA1 /* UIKit.framework */; };
+		EFF48D40200C89C000329EA1 /* ANYMethodLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF48D3F200C89C000329EA1 /* ANYMethodLog.h */; };
+		EFF48D42200C89C000329EA1 /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF48D41200C89C000329EA1 /* ANYMethodLog.m */; };
+		EFF48D44200C89C000329EA1 /* MethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF48D43200C89C000329EA1 /* MethodTrace.h */; };
+		EFF48D46200C89C000329EA1 /* MethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF48D45200C89C000329EA1 /* MethodTrace.m */; };
+		EFF48D4B200C89C000329EA1 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF48D4A200C89C000329EA1 /* AntiAntiDebug.m */; };
+		EFF48D4E200C89C000329EA1 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = EFF48D4D200C89C000329EA1 /* fishhook.c */; };
+		EFF48D50200C89C000329EA1 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF48D4F200C89C000329EA1 /* fishhook.h */; };
+		EFF48D53200C89C100329EA1 /* LiveTriviaDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = EFF48D52200C89C100329EA1 /* LiveTriviaDylib.mm */; };
+		EFF48D55200C89C100329EA1 /* LiveTriviaDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF48D54200C89C100329EA1 /* LiveTriviaDylib.h */; };
+		EFF48D57200C89C100329EA1 /* LiveTriviaDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF48D56200C89C100329EA1 /* LiveTriviaDylib.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFF48D30200C89C000329EA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFF48D15200C89C000329EA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFF48D2D200C89C000329EA1;
+			remoteInfo = LiveTriviaDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFF48D1D200C89C000329EA1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EFF48D2F200C89C000329EA1 /* libLiveTriviaDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EFF48D20200C89C000329EA1 /* LiveTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF48D23200C89C000329EA1 /* MethodTraceConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MethodTraceConfig.plist; sourceTree = "<group>"; };
+		EFF48D26200C89C000329EA1 /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; name = "put ipa or app here"; path = "TargetApp/put ipa or app here"; sourceTree = "<group>"; };
+		EFF48D28200C89C000329EA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF48D2E200C89C000329EA1 /* libLiveTriviaDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libLiveTriviaDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFF48D33200C89C000329EA1 /* Cycript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cycript.framework; path = Library/Frameworks/Cycript.framework; sourceTree = DEVELOPER_DIR; };
+		EFF48D35200C89C000329EA1 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EFF48D37200C89C000329EA1 /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = Library/Frameworks/RevealServer.framework; sourceTree = DEVELOPER_DIR; };
+		EFF48D39200C89C000329EA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFF48D3B200C89C000329EA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EFF48D3F200C89C000329EA1 /* ANYMethodLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = MethodTrace/ANYMethodLog.h; sourceTree = "<group>"; };
+		EFF48D41200C89C000329EA1 /* ANYMethodLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = MethodTrace/ANYMethodLog.m; sourceTree = "<group>"; };
+		EFF48D43200C89C000329EA1 /* MethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MethodTrace.h; path = MethodTrace/MethodTrace.h; sourceTree = "<group>"; };
+		EFF48D45200C89C000329EA1 /* MethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MethodTrace.m; path = MethodTrace/MethodTrace.m; sourceTree = "<group>"; };
+		EFF48D48200C89C000329EA1 /* LiveTriviaDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LiveTriviaDylib-Prefix.pch"; sourceTree = "<group>"; };
+		EFF48D4A200C89C000329EA1 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
+		EFF48D4D200C89C000329EA1 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
+		EFF48D4F200C89C000329EA1 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
+		EFF48D51200C89C000329EA1 /* LiveTriviaDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LiveTriviaDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		EFF48D52200C89C100329EA1 /* LiveTriviaDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LiveTriviaDylib.mm; sourceTree = "<group>"; };
+		EFF48D54200C89C100329EA1 /* LiveTriviaDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveTriviaDylib.h; sourceTree = "<group>"; };
+		EFF48D56200C89C100329EA1 /* LiveTriviaDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveTriviaDylib.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFF48D1A200C89C000329EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFF48D2B200C89C000329EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF48D36200C89C000329EA1 /* JavaScriptCore.framework in Frameworks */,
+				EFF48D38200C89C000329EA1 /* RevealServer.framework in Frameworks */,
+				EFF48D34200C89C000329EA1 /* Cycript.framework in Frameworks */,
+				EFF48D3A200C89C000329EA1 /* Foundation.framework in Frameworks */,
+				EFF48D3C200C89C000329EA1 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFF48D14200C89C000329EA1 = {
+			isa = PBXGroup;
+			children = (
+				EFF48D22200C89C000329EA1 /* LiveTrivia */,
+				EFF48D3D200C89C000329EA1 /* LiveTriviaDylib */,
+				EFF48D32200C89C000329EA1 /* Frameworks */,
+				EFF48D21200C89C000329EA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFF48D21200C89C000329EA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D20200C89C000329EA1 /* LiveTrivia.app */,
+				EFF48D2E200C89C000329EA1 /* libLiveTriviaDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFF48D22200C89C000329EA1 /* LiveTrivia */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D23200C89C000329EA1 /* MethodTraceConfig.plist */,
+				EFF48D28200C89C000329EA1 /* Info.plist */,
+				EFF48D25200C89C000329EA1 /* TargetApp */,
+			);
+			path = LiveTrivia;
+			sourceTree = "<group>";
+		};
+		EFF48D25200C89C000329EA1 /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D26200C89C000329EA1 /* put ipa or app here */,
+			);
+			name = TargetApp;
+			sourceTree = "<group>";
+		};
+		EFF48D32200C89C000329EA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D33200C89C000329EA1 /* Cycript.framework */,
+				EFF48D35200C89C000329EA1 /* JavaScriptCore.framework */,
+				EFF48D37200C89C000329EA1 /* RevealServer.framework */,
+				EFF48D39200C89C000329EA1 /* Foundation.framework */,
+				EFF48D3B200C89C000329EA1 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFF48D3D200C89C000329EA1 /* LiveTriviaDylib */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D51200C89C000329EA1 /* LiveTriviaDylib.xm */,
+				EFF48D52200C89C100329EA1 /* LiveTriviaDylib.mm */,
+				EFF48D54200C89C100329EA1 /* LiveTriviaDylib.h */,
+				EFF48D56200C89C100329EA1 /* LiveTriviaDylib.m */,
+				EFF48D3E200C89C000329EA1 /* MethodTrace */,
+				EFF48D49200C89C000329EA1 /* AntiAntiDebug */,
+				EFF48D4C200C89C000329EA1 /* fishhook */,
+				EFF48D47200C89C000329EA1 /* Supporting Files */,
+			);
+			path = LiveTriviaDylib;
+			sourceTree = "<group>";
+		};
+		EFF48D3E200C89C000329EA1 /* MethodTrace */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D3F200C89C000329EA1 /* ANYMethodLog.h */,
+				EFF48D41200C89C000329EA1 /* ANYMethodLog.m */,
+				EFF48D43200C89C000329EA1 /* MethodTrace.h */,
+				EFF48D45200C89C000329EA1 /* MethodTrace.m */,
+			);
+			name = MethodTrace;
+			sourceTree = "<group>";
+		};
+		EFF48D47200C89C000329EA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D48200C89C000329EA1 /* LiveTriviaDylib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFF48D49200C89C000329EA1 /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D4A200C89C000329EA1 /* AntiAntiDebug.m */,
+			);
+			name = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		EFF48D4C200C89C000329EA1 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				EFF48D4D200C89C000329EA1 /* fishhook.c */,
+				EFF48D4F200C89C000329EA1 /* fishhook.h */,
+			);
+			name = fishhook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EFF48D2C200C89C000329EA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF48D40200C89C000329EA1 /* ANYMethodLog.h in Headers */,
+				EFF48D44200C89C000329EA1 /* MethodTrace.h in Headers */,
+				EFF48D55200C89C100329EA1 /* LiveTriviaDylib.h in Headers */,
+				EFF48D50200C89C000329EA1 /* fishhook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EFF48D1F200C89C000329EA1 /* LiveTrivia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFF48D5D200C89C100329EA1 /* Build configuration list for PBXNativeTarget "LiveTrivia" */;
+			buildPhases = (
+				EFF48D19200C89C000329EA1 /* Sources */,
+				EFF48D1A200C89C000329EA1 /* Frameworks */,
+				EFF48D1B200C89C000329EA1 /* ShellScript */,
+				EFF48D1C200C89C000329EA1 /* Resources */,
+				EFF48D1D200C89C000329EA1 /* CopyFiles */,
+				EFF48D1E200C89C000329EA1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFF48D31200C89C000329EA1 /* PBXTargetDependency */,
+			);
+			name = LiveTrivia;
+			productName = LiveTrivia;
+			productReference = EFF48D20200C89C000329EA1 /* LiveTrivia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFF48D2D200C89C000329EA1 /* LiveTriviaDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFF48D5A200C89C100329EA1 /* Build configuration list for PBXNativeTarget "LiveTriviaDylib" */;
+			buildPhases = (
+				EFF48D29200C89C000329EA1 /* ShellScript */,
+				EFF48D2A200C89C000329EA1 /* Sources */,
+				EFF48D2B200C89C000329EA1 /* Frameworks */,
+				EFF48D2C200C89C000329EA1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveTriviaDylib;
+			productName = LiveTriviaDylib;
+			productReference = EFF48D2E200C89C000329EA1 /* libLiveTriviaDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFF48D15200C89C000329EA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = zhuyongqing;
+				TargetAttributes = {
+					EFF48D1F200C89C000329EA1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					EFF48D2D200C89C000329EA1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EFF48D18200C89C000329EA1 /* Build configuration list for PBXProject "LiveTrivia" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EFF48D14200C89C000329EA1;
+			productRefGroup = EFF48D21200C89C000329EA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFF48D1F200C89C000329EA1 /* LiveTrivia */,
+				EFF48D2D200C89C000329EA1 /* LiveTriviaDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFF48D1C200C89C000329EA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF48D27200C89C000329EA1 /* put ipa or app here in Resources */,
+				EFF48D24200C89C000329EA1 /* MethodTraceConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EFF48D1B200C89C000329EA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+		};
+		EFF48D1E200C89C000329EA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+		};
+		EFF48D29200C89C000329EA1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFF48D19200C89C000329EA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFF48D2A200C89C000329EA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF48D4B200C89C000329EA1 /* AntiAntiDebug.m in Sources */,
+				EFF48D57200C89C100329EA1 /* LiveTriviaDylib.m in Sources */,
+				EFF48D46200C89C000329EA1 /* MethodTrace.m in Sources */,
+				EFF48D53200C89C100329EA1 /* LiveTriviaDylib.mm in Sources */,
+				EFF48D4E200C89C000329EA1 /* fishhook.c in Sources */,
+				EFF48D42200C89C000329EA1 /* ANYMethodLog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFF48D31200C89C000329EA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFF48D2D200C89C000329EA1 /* LiveTriviaDylib */;
+			targetProxy = EFF48D30200C89C000329EA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EFF48D58200C89C100329EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EFF48D59200C89C100329EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFF48D5B200C89C100329EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D76KSJZQR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiveTriviaDylib/LiveTriviaDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libLiveTriviaDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"LiveTriviaDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-lsubstrate",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		EFF48D5C200C89C100329EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 5D76KSJZQR;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LiveTriviaDylib/LiveTriviaDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libLiveTriviaDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"LiveTriviaDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-lsubstrate",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFF48D5E200C89C100329EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yue Wang (UZ6TPZA9BT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5D76KSJZQR;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = LiveTrivia/Info.plist;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhu.live.LiveTrivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e9afca7a-dfb7-41af-b84c-34bb65391b35";
+				PROVISIONING_PROFILE_SPECIFIER = EveryAppProfile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFF48D5F200C89C100329EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yue Wang (UZ6TPZA9BT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5D76KSJZQR;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = LiveTrivia/Info.plist;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhu.live.LiveTrivia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e9afca7a-dfb7-41af-b84c-34bb65391b35";
+				PROVISIONING_PROFILE_SPECIFIER = EveryAppProfile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFF48D18200C89C000329EA1 /* Build configuration list for PBXProject "LiveTrivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFF48D58200C89C100329EA1 /* Debug */,
+				EFF48D59200C89C100329EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFF48D5A200C89C100329EA1 /* Build configuration list for PBXNativeTarget "LiveTriviaDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFF48D5B200C89C100329EA1 /* Debug */,
+				EFF48D5C200C89C100329EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFF48D5D200C89C100329EA1 /* Build configuration list for PBXNativeTarget "LiveTrivia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFF48D5E200C89C100329EA1 /* Debug */,
+				EFF48D5F200C89C100329EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFF48D15200C89C000329EA1 /* Project object */;
+}
