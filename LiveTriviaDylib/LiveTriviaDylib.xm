@@ -36,29 +36,4 @@
 
 %end
 
-%hook _TtC10LiveTrivia18LiveViewController
-
-%new
-- (void)moveWebAction:(UIButton *)btn{
-    NSLog(@"%@",btn.superview);
-    UIWebView *web = btn.superview;
-    CGFloat top = 150;
-    CGFloat offsetY = 80;
-    if (CGRectGetMinY(web.frame) == 150) {
-        [UIView animateWithDuration:.3 animations:^{
-            CGRect newFrame = CGRectMake(0, kHeight/2 + offsetY, kWidth, kHeight/2 - offsetY);
-            web.frame = newFrame;
-        } completion:^(BOOL finished) {
-            
-        }];
-    }else{
-        [UIView animateWithDuration:.3 animations:^{
-            CGRect newFrame = CGRectMake(0, top, kWidth, kHeight - top);
-            web.frame = newFrame;
-        } completion:^(BOOL finished) {
-            
-        }];
-    }
-}
-
 

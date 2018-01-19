@@ -48,16 +48,34 @@ CHOptimizedMethod(0, self,void,_TtC10LiveTrivia18HomeViewController,viewDidLoad)
 }
 
 CHDeclareClass(_TtC10LiveTrivia18LiveViewController)
+
+void moveWebAction(id self,SEL _cmd,UIButton *btn){
+    NSLog(@"%@",btn.superview);
+    UIWebView *web = btn.superview;
+    CGFloat top = 150;
+    CGFloat offsetY = 80;
+    CGFloat originY = CGRectGetMinY(web.frame) == top? (kHeight/2 + offsetY) : top;
+    [UIView animateWithDuration:.3 animations:^{
+        CGRect newFrame = CGRectMake(0, originY, kWidth, kHeight - originY);
+        web.frame = newFrame;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
 CHOptimizedMethod(0, self,void,_TtC10LiveTrivia18LiveViewController,viewDidLoad){
     CHSuper(0, _TtC10LiveTrivia18LiveViewController,viewDidLoad);
     UIWindow *win = [UIApplication sharedApplication].keyWindow;
     UIView *view = CHIvar(self, _view, __strong UIView *);
-    UIWebView *web = [[UIWebView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(view.frame)/2 + 80, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame)/2 - 80)];
+    CGFloat offsetY = 80;
+    UIWebView *web = [[UIWebView alloc] initWithFrame:CGRectMake(0, kHeight/2 + offsetY, kWidth, kHeight/2 - offsetY)];
     web.layer.cornerRadius = 4;
     web.layer.masksToBounds = YES;
-    web.tag = 100;
     [win addSubview:web];
     objc_setAssociatedObject(self, @"searchWeb", web, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    
+    Class cls = NSClassFromString(@"_TtC10LiveTrivia18LiveViewController");
+    class_addMethod(cls, @selector(moveWebAction:), (IMP)moveWebAction, "v@:@");
     
     UIButton *moveWeb = [UIButton buttonWithType:UIButtonTypeSystem];
     [moveWeb setTitle:@"Move" forState:UIControlStateNormal];
