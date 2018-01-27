@@ -25,26 +25,11 @@ static __attribute__((constructor)) void entry(){
     }];
 }
 
+
 CHDeclareClass(_TtC10LiveTrivia18HomeViewController)
 CHOptimizedMethod(0, self,void,_TtC10LiveTrivia18HomeViewController,viewDidLoad){
     
     CHSuper(0, _TtC10LiveTrivia18HomeViewController,viewDidLoad);
-    
-//    UIWindow *win = [UIApplication sharedApplication].keyWindow;
-//    UIView *view = CHIvar(self, _view, __strong UIView *);
-//    UIWebView *web = [[UIWebView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(view.frame)/2 + 80, CGRectGetWidth(view.frame), CGRectGetHeight(view.frame)/2 - 80)];
-//    web.layer.cornerRadius = 4;
-//    web.layer.masksToBounds = YES;
-//    [view addSubview:web];
-//    objc_setAssociatedObject(self, @"searchWeb", web, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//
-//    UIButton *moveWeb = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [moveWeb setTitle:@"Move" forState:UIControlStateNormal];
-//    [moveWeb addTarget:self action:@selector(moveWebAction) forControlEvents:UIControlEventTouchUpInside];
-//    [moveWeb setFrame:CGRectMake(0, 0, CGRectGetWidth(web.frame), 45)];
-//    moveWeb.backgroundColor = [UIColor whiteColor];
-//    [web addSubview:moveWeb];
-
 }
 
 CHDeclareClass(_TtC10LiveTrivia18LiveViewController)
@@ -84,9 +69,9 @@ CHOptimizedMethod(0, self,void,_TtC10LiveTrivia18LiveViewController,viewDidLoad)
     moveWeb.backgroundColor = [UIColor whiteColor];
     [web addSubview:moveWeb];
    
-    NSLog(@"%@",view.subviews[1].subviews[1]);
+    NSLog(@"%@",view.subviews[1].subviews[2]);
     
-    UIView *questionView = view.subviews[1].subviews[1];
+    UIView *questionView = view.subviews[1].subviews[2];
      [questionView addObserver:self forKeyPath:@"alpha" options:NSKeyValueObservingOptionNew context:nil];
     
     UILabel *qaLabel = questionView.subviews[3].subviews.firstObject;
@@ -101,6 +86,9 @@ CHOptimizedMethod(0, self,void,_TtC10LiveTrivia18LiveViewController,viewDidLoad)
     
     
     NSLog(@"%@--%@---%@---%@",qaLabel,option1,option2,option3);
+    
+    
+    
     /*
     [view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -123,7 +111,7 @@ CHOptimizedMethod(0, self,void,_TtC10LiveTrivia18LiveViewController,viewDidLoad)
             
         }];
     }];
-     */
+    */
 }
 
 
